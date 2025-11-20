@@ -1,0 +1,293 @@
+  body {
+      font-family: Monospace, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+
+    }
+    header {
+      background-image: url('images/pr.jpg');
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2)
+    }
+    nav {
+      background: #2F4F2F;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.8rem 1rem;
+      flex-wrap: wrap;
+
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover,
+    nav a:focus {
+      background: #003f7f;
+      outline: none;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      background: white;
+      padding: 1.8rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+      scroll-margin-top: 100px;
+    }
+    h2 {
+      border-bottom: 3px solid #007BFF;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+     h6 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      margin: 0.5rem auto 0.5rem;
+      text-align: center;
+      background: rgba(16, 58, 0, 0.31);
+      padding: 7px;
+      border-radius: 30px;
+      max-width: 900px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    h5 {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+
+    img {
+      max-width: 40%;
+      border-radius: 8px;
+      margin-top: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #e0e0e0;
+      font-size: 0.9rem;
+      color: #555;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        font-size: 1.1rem;
+      }
+    }
+    /* Seção de Histórias */
+    #historias {
+      margin-bottom: 3rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+    }
+
+    #historias h2 {
+      border-bottom: 3px solid #007BFF;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #formHistoria {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    #formHistoria input,
+    #formHistoria textarea {
+      padding: 0.9rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+      resize: vertical;
+    }
+
+    #formHistoria textarea {
+      min-height: 120px;
+    }
+
+    #formHistoria button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    #formHistoria button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Lista de Histórias */
+    #listaHistorias {
+      margin-top: 2rem;
+    }
+
+    #listaHistorias h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    #historiasContainer {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    #historiasContainer li {
+      background: #f4f4f4;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    #historiasContainer strong {
+      color: #00008B;
+      font-weight: bold;
+    }
+
+    main section {
+        display: none;
+    }
+
+    main section.active {
+        display: block;
+    }
+
+    nav a.active {
+        background: #007BFF !important; /* Cor que destaca o item ativo */
+    }
+
+
+   /* --- Estilos para a Tela de Boas-Vindas Criativa --- */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Escala ligeiramente maior */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        }
+    }
+
+    #welcome-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+
+        /* Fundo com Imagem e Gradiente */
+        background-image:
+            linear-gradient(rgba(46, 111, 69, 0.8), rgba(47, 79, 47, 0.9)),
+            url('images/pr.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        opacity: 1;
+        transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+    }
+
+    #welcome-screen.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .welcome-content {
+        max-width: 90%;
+        padding: 3rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+    .welcome-content h2 {
+        font-size: 2.5rem;
+        color: #fefda6;
+        text-shadow: 2px 2px #000000;
+        margin-bottom: 1rem;
+    }
+
+    .welcome-content p {
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+
+    #enter-button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 1.2rem 3rem;
+        margin-top: 1.5rem;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: background-color 0.3s, transform 0.3s;
+
+        animation: pulse 2s infinite;
+    }
+
+    #enter-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+        animation: none;
+    }
